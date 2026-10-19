@@ -1,35 +1,288 @@
-<h1>
-    Hola mundo, mi nombre es:<u> Jordan Huiracocha </u> 
-    <br>
-    Mi email es: <u>huiradasfhkjasdf@utc.edu.ec
-</h1>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Aprende qué es la arquitectura desacoplada y cómo los microservicios ayudan a crear sistemas flexibles y escalables.">
+    <meta name="theme-color" content="#fdfbf7">
+    <title>Arquitectura desacoplada | Microservicios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top site-navbar" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio" aria-label="Ir al inicio">
+          <span class="brand-mark" aria-hidden="true">A</span>
+          <span>Arquitectura <span class="brand-light">desacoplada</span></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+            <li class="nav-item"><a class="nav-link" href="#concepto">Concepto</a></li>
+            <li class="nav-item"><a class="nav-link" href="#ventajas">Ventajas</a></li>
+            <li class="nav-item"><a class="nav-link" href="#multimedia">Multimedia</a></li>
+            <li class="nav-item"><a class="nav-link" href="#creador">Creador</a></li>
+            <li class="nav-item"><a class="nav-link nav-quiz-link" href="#quiz">Pon a prueba lo aprendido <span aria-hidden="true">↗</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-<div>
-    <table border="1">
-        <tr>
-            <img src="img/image.png" alt="Foto de perfil" width="200" height="200">
-        </tr>
-        
-        <tr>
-            <th>Apellido:</th>
-            <td><u>Huiracocha</u></td>
-        </tr>
-        <tr>
-            <th>Nombre:</th>
-            <td><u>Jordan</u></td>
-        </tr>
-        <tr>
-            <th>Email:</th>
-            <td><u>huiracochajordan@gmail.com</u></td>
-        </tr>
-        <tr>
-            <th>Dirección:</th>
-            <td><u>Quito</u></td>
-        </tr>
-        <tr>
-            <th>Acerca de mí:</th>
-            <td><u>Soy un estudiante de la Universidad Técnica de Cotopaxi</u></td>
-        </tr>
-    </table>
-</div>
-<!-- veresion 1 -->
+    <main>
+      <section class="hero-section" id="inicio">
+        <div class="container hero-content">
+          <div class="row align-items-center gy-5">
+            <div class="col-lg-7">
+              <p class="eyebrow"><span class="eyebrow-dot"></span>Una guía sencilla para entender sistemas modernos</p>
+              <h1>Construye en pequeño.<br><span class="text-accent">Evoluciona sin límites.</span></h1>
+              <p class="hero-copy">Descubre cómo la arquitectura desacoplada divide una aplicación en servicios independientes que colaboran para crear soluciones más flexibles.</p>
+              <div class="d-flex flex-wrap gap-3 align-items-center">
+                <a class="btn btn-forest btn-lg" href="#concepto">Explorar el concepto <span aria-hidden="true">→</span></a>
+                <span class="hero-note"><span class="note-icon" aria-hidden="true">✳</span> Aprende a tu ritmo</span>
+              </div>
+              <div class="hero-stats">
+                <div><strong>01</strong><span>Un concepto<br>fundamental</span></div>
+                <div><strong>02</strong><span>Ideas prácticas<br>y visuales</span></div>
+                <div><strong>03</strong><span>Un quiz para<br>comprobarlo</span></div>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="hero-visual" aria-label="Ilustración de varios servicios conectados">
+                <div class="visual-orbit orbit-one"></div>
+                <div class="visual-orbit orbit-two"></div>
+                <div class="service-card service-users"><span class="service-icon" aria-hidden="true">◎</span><span>Usuarios</span></div>
+                <div class="service-card service-orders"><span class="service-icon" aria-hidden="true">▤</span><span>Pedidos</span></div>
+                <div class="service-card service-payments"><span class="service-icon" aria-hidden="true">◇</span><span>Pagos</span></div>
+                <div class="service-card service-inventory"><span class="service-icon" aria-hidden="true">▦</span><span>Inventario</span></div>
+                <div class="hub-card">
+                  <div class="hub-symbol" aria-hidden="true"><span></span><span></span><span></span></div>
+                  <strong>Una aplicación</strong>
+                  <small>servicios que colaboran</small>
+                </div>
+                <span class="visual-caption">Pequeños equipos. Un gran sistema.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#concepto" aria-label="Desplazarse al contenido"><span aria-hidden="true">↓</span></a>
+      </section>
+
+      <section class="section-padding" id="concepto">
+        <div class="container">
+          <div class="section-heading text-center">
+            <span class="section-kicker">01 — El concepto</span>
+            <h2>Dos maneras de construir<br class="d-none d-md-block"> una aplicación</h2>
+            <p>El monolito reúne las funcionalidades en una sola unidad. Los microservicios las distribuyen en componentes pequeños y autónomos.</p>
+          </div>
+          <div class="row g-4 comparison-row">
+            <div class="col-lg-6">
+              <article class="comparison-card monolith-card h-100">
+                <div class="comparison-top">
+                  <div>
+                    <span class="card-label">Una sola unidad</span>
+                    <h3>Monolito</h3>
+                  </div>
+                  <span class="comparison-icon" aria-hidden="true">▰</span>
+                </div>
+                <p>La interfaz, la lógica y los datos viven dentro de una aplicación desplegada como un único bloque.</p>
+                <div class="monolith-diagram" role="img" aria-label="Interfaz, lógica y datos unidos en una aplicación">
+                  <div class="monolith-layer">Interfaz</div>
+                  <div class="monolith-layer">Lógica de negocio</div>
+                  <div class="monolith-layer">Datos</div>
+                  <span class="diagram-caption">Una base de código · un despliegue</span>
+                </div>
+                <ul class="comparison-points">
+                  <li><span aria-hidden="true">+</span> Fácil de iniciar y desarrollar en proyectos pequeños.</li>
+                  <li><span aria-hidden="true">−</span> Un cambio puede requerir desplegar toda la aplicación.</li>
+                </ul>
+              </article>
+            </div>
+            <div class="col-lg-6">
+              <article class="comparison-card micro-card h-100">
+                <div class="comparison-top">
+                  <div>
+                    <span class="card-label">Partes independientes</span>
+                    <h3>Microservicios</h3>
+                  </div>
+                  <span class="comparison-icon" aria-hidden="true">✳</span>
+                </div>
+                <p>La aplicación se organiza en servicios pequeños, cada uno responsable de una capacidad del negocio.</p>
+                <div class="micro-diagram" role="img" aria-label="Servicios independientes de usuarios, pedidos y pagos conectados">
+                  <div class="micro-node"><span aria-hidden="true">◎</span>Usuarios</div>
+                  <div class="micro-node"><span aria-hidden="true">▤</span>Pedidos</div>
+                  <div class="micro-node"><span aria-hidden="true">◇</span>Pagos</div>
+                  <div class="micro-connector" aria-hidden="true"></div>
+                  <span class="diagram-caption">Servicios autónomos · comunicación por API</span>
+                </div>
+                <ul class="comparison-points">
+                  <li><span aria-hidden="true">+</span> Cada servicio puede evolucionar y desplegarse por separado.</li>
+                  <li><span aria-hidden="true">−</span> Requiere coordinar comunicación, datos y operación.</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+          <div class="insight-banner">
+            <span class="insight-mark" aria-hidden="true">✦</span>
+            <p><strong>Desacoplar no significa aislar.</strong> Los servicios se comunican mediante contratos claros —como APIs— y trabajan juntos para ofrecer una experiencia completa.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-padding benefits-section" id="ventajas">
+        <div class="container">
+          <div class="row align-items-end gy-3 section-heading-row">
+            <div class="col-lg-7">
+              <span class="section-kicker">02 — ¿Qué aporta?</span>
+              <h2>La libertad de cambiar<br class="d-none d-md-block"> una pieza a la vez</h2>
+            </div>
+            <div class="col-lg-5">
+              <p class="heading-side-copy">Con límites bien definidos, los equipos pueden enfocarse y tomar decisiones con mayor autonomía.</p>
+            </div>
+          </div>
+          <div class="row g-3 benefits-grid">
+            <div class="col-sm-6 col-lg-3">
+              <article class="benefit-card h-100">
+                <span class="benefit-icon icon-sage" aria-hidden="true">↗</span>
+                <span class="benefit-number">01</span>
+                <h3>Escala selectiva</h3>
+                <p>Dedica más recursos solo al servicio que tiene mayor demanda.</p>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <article class="benefit-card h-100">
+                <span class="benefit-icon icon-cream" aria-hidden="true">⌘</span>
+                <span class="benefit-number">02</span>
+                <h3>Desarrollo ágil</h3>
+                <p>Permite que equipos trabajen en servicios distintos en paralelo.</p>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <article class="benefit-card h-100">
+                <span class="benefit-icon icon-green" aria-hidden="true">⟳</span>
+                <span class="benefit-number">03</span>
+                <h3>Cambios aislados</h3>
+                <p>Actualiza un servicio sin reconstruir toda la aplicación.</p>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <article class="benefit-card h-100">
+                <span class="benefit-icon icon-sand" aria-hidden="true">⌘</span>
+                <span class="benefit-number">04</span>
+                <h3>Tecnología flexible</h3>
+                <p>Elige las herramientas que mejor resuelven cada problema.</p>
+              </article>
+            </div>
+          </div>
+          <p class="benefits-footnote"><span aria-hidden="true">↳</span> Cada ventaja viene con decisiones de diseño: observabilidad, automatización y comunicación confiable son esenciales.</p>
+        </div>
+      </section>
+
+      <section class="section-padding media-section" id="multimedia">
+        <div class="container">
+          <div class="row align-items-center gy-4">
+            <div class="col-lg-5">
+              <span class="section-kicker">03 — Mira y aprende</span>
+              <h2>Un concepto que<br>se entiende mejor<br><span class="text-accent">en movimiento.</span></h2>
+              <p>Explora la arquitectura de microservicios con un video introductorio. Puedes añadir un archivo propio en la carpeta <code>video/</code> o buscar contenido en YouTube.</p>
+              <a class="youtube-link" href="https://www.youtube.com/results?search_query=introducci%C3%B3n+arquitectura+de+microservicios" target="_blank" rel="noopener noreferrer">Buscar videos educativos en YouTube <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="col-lg-7">
+              <div class="video-frame ratio ratio-16x9">
+                <video controls preload="metadata" poster="img/image.png" aria-label="Video introductorio sobre arquitectura desacoplada y microservicios">
+                  <source src="video/arquitectura-desacoplada.mp4" type="video/mp4">
+                  Tu navegador no puede reproducir este video. Prueba con un navegador actualizado o usa el enlace de YouTube.
+                </video>
+                <span class="video-tag"><span aria-hidden="true">▶</span> VIDEO INTRODUCTORIO</span>
+              </div>
+              <p class="video-caption">Para reproducir un video local, guarda <strong>arquitectura-desacoplada.mp4</strong> en la carpeta <strong>video/</strong>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-padding creator-section" id="creador">
+        <div class="container">
+          <div class="creator-card">
+            <div class="creator-visual">
+              <span class="creator-overline">Detrás de esta guía</span>
+              <img src="img/image.png" alt="Ilustración de una persona desarrollando con su computadora" width="554" height="554" loading="lazy">
+              <span class="creator-caption">Aprender. Crear. Compartir.</span>
+            </div>
+            <div class="creator-info">
+              <span class="section-kicker">04 — Sobre el creador</span>
+              <h2>Hola, soy Jordan.</h2>
+              <p class="creator-intro">Me interesa cómo el software puede resolver problemas reales. Esta guía forma parte de mi camino de aprendizaje y busca hacer más claros algunos conceptos de arquitectura.</p>
+              <dl class="creator-details">
+                <div><dt>Nombre</dt><dd>Jordan Huiracocha</dd></div>
+                <div><dt>Institución</dt><dd>Universidad Técnica de Cotopaxi</dd></div>
+                <div><dt>Carrera / área</dt><dd>Ingeniería en Sistemas <span aria-hidden="true">·</span> Desarrollo de Software</dd></div>
+                <div><dt>Acerca de mí</dt><dd>Estudiante apasionado por aprender y construir soluciones de software.</dd></div>
+              </dl>
+              <span class="creator-signoff">Con curiosidad y código <span aria-hidden="true">✳</span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-padding quiz-section" id="quiz">
+        <div class="container">
+          <div class="quiz-layout">
+            <div class="quiz-intro">
+              <span class="section-kicker">05 — Tu turno</span>
+              <h2>¿Cuánto<br>has aprendido?</h2>
+              <p>Responde estas preguntas para fijar las ideas clave. ¡Sin presión, puedes intentarlo de nuevo!</p>
+              <div class="score-card" aria-live="polite">
+                <span class="score-label">Tu puntuación</span>
+                <span class="score-value"><span id="score">0</span><span class="score-total"> / <span id="question-total">5</span></span></span>
+                <span class="score-message" id="score-message">¡Tú puedes!</span>
+              </div>
+            </div>
+            <div class="quiz-panel">
+              <div class="quiz-panel-top">
+                <span id="progress-label">PREGUNTA 1 DE 5</span>
+                <div class="progress quiz-progress" role="progressbar" aria-label="Progreso del cuestionario" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0">
+                  <div class="progress-bar" id="quiz-progress-bar"></div>
+                </div>
+              </div>
+              <div id="quiz-content">
+                <h3 id="question-text" class="question-text" tabindex="-1"></h3>
+                <div id="answer-list" class="answer-list" role="group" aria-labelledby="question-text"></div>
+                <p id="answer-feedback" class="answer-feedback" aria-live="polite"></p>
+                <button class="btn btn-forest quiz-next-btn" id="next-question" type="button" disabled>Siguiente pregunta <span aria-hidden="true">→</span></button>
+              </div>
+              <div class="quiz-complete d-none" id="quiz-complete" aria-live="polite">
+                <span class="complete-icon" aria-hidden="true">✳</span>
+                <h3 id="complete-title">¡Cuestionario completado!</h3>
+                <p id="complete-message"></p>
+                <button class="btn btn-forest" id="restart-quiz" type="button">Intentar de nuevo <span aria-hidden="true">↻</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-main">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+            <span class="brand-mark" aria-hidden="true">A</span>
+            <span>Arquitectura <span class="brand-light">desacoplada</span></span>
+          </a>
+          <p>Ideas claras para construir software con intención.</p>
+          <a class="back-to-top" href="#inicio">Volver al inicio <span aria-hidden="true">↑</span></a>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span id="current-year"></span> Jordan Huiracocha · Universidad Técnica de Cotopaxi</span>
+          <span>Hecho para aprender, compartir y seguir creciendo <span aria-hidden="true">✳</span></span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
